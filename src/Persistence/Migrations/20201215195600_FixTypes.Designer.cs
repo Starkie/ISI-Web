@@ -3,14 +3,16 @@ using System;
 using Fotografos.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fotografos.Persistence.Migrations
 {
     [DbContext(typeof(FotomixContext))]
-    partial class FotomixContextModelSnapshot : ModelSnapshot
+    [Migration("20201215195600_FixTypes")]
+    partial class FixTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

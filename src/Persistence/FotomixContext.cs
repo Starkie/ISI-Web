@@ -34,9 +34,9 @@ namespace Fotografos.Persistence
                     .IsRequired()
                     .HasColumnName("date");
 
-                entity.Property(e => e.EquimentDescription)
+                entity.Property(e => e.EquipmentDescription)
                     .IsRequired()
-                    .HasColumnName("equimentDescription");
+                    .HasColumnName("equipmentDescription");
 
                 entity.Property(e => e.PhotographerId)
                     .HasColumnType("INT")
@@ -90,8 +90,8 @@ namespace Fotografos.Persistence
             modelBuilder.Entity<Application>().HasData(
                 new []
                 {
-                    new Application { Id = 1, PhotographerId = 1, Date = new DateTime(2020, 10, 15), EquimentDescription = "Two cameras", Resume = "Photographer at a wedding" },
-                    new Application { Id = 2, PhotographerId = 2, Date = new DateTime(2020, 08, 15), EquimentDescription = "Two cameras and tripod", Resume = "Nature photographer" },
+                    new Application { Id = 1, PhotographerId = 1, Date = new DateTime(2020, 10, 15), EquipmentDescription = "Two cameras", Resume = "Photographer at a wedding" },
+                    new Application { Id = 2, PhotographerId = 2, Date = new DateTime(2020, 08, 15), EquipmentDescription = "Two cameras and tripod", Resume = "Nature photographer" },
                 }
             );
 

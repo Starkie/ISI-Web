@@ -29,7 +29,7 @@ namespace Fotografos.Logic.Managers
 
         public Application CreateApplication(Application application)
         {
-            if (application.Date == default || string.IsNullOrEmpty(application.EquimentDescription) ||
+            if (application.Date == default || string.IsNullOrEmpty(application.EquipmentDescription) ||
                 string.IsNullOrEmpty(application.Resume) || application.PhotographerId == 0)
             {
                 return null;

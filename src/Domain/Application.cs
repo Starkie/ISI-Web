@@ -7,7 +7,7 @@ namespace Fotografos.Domain
     {
         public long Id { get; set; }
         public DateTime Date { get; set; }
-        public string EquimentDescription { get; set; }
+        public string EquipmentDescription { get; set; }
         public string Resume { get; set; }
         public long? PhotographerId { get; set; }
     }
