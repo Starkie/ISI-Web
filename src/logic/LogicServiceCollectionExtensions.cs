@@ -13,6 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddFotografosServices(this IServiceCollection services)
         {
             services.AddScoped<ApplicationManager>();
+            services.AddScoped<PhotographerManager>();
 
             return services;
         }
