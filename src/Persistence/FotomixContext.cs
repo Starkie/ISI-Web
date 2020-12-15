@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Fotografos.Persistence
 {
-    public partial class fotomixContext : DbContext
+    public partial class FotomixContext : DbContext
     {
-        public fotomixContext() { }
+        public FotomixContext() { }
 
-        public fotomixContext(DbContextOptions<fotomixContext> options) : base(options) { }
+        public FotomixContext(DbContextOptions<FotomixContext> options) : base(options) { }
 
         public virtual DbSet<Application> Applications { get; set; }
         public virtual DbSet<Photographer> Photographers { get; set; }
