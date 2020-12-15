@@ -53,7 +53,7 @@ namespace Fotogratos.Server.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Application> CreateStarship([FromBody] Application application)
+        public ActionResult<Application> CreateApplication([FromBody] Application application)
         {
             this.logger.LogInformation($"Creation of application - PhotographerId: {application.PhotographerId}");
 
