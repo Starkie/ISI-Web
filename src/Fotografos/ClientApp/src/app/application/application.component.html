@@ -19,9 +19,7 @@
       <ng-template pTemplate="body" let-application let-columns="columns">
         <tr>
           <td *ngFor="let col of columns">
-            <ng-template #elseBlock>
-              {{ application[col.field] }}
-            </ng-template>
+            {{ application[col.field] }}
           </td>
         </tr>
       </ng-template>
