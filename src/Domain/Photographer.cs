@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Fotografos.Persistence
+namespace Fotografos.Domain
 {
     public partial class Photographer
     {

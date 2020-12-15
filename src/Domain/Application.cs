@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-#nullable disable
-
-namespace Fotografos.Persistence
+namespace Fotografos.Domain
 {
     public partial class Application
     {

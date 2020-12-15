@@ -1,21 +1,13 @@
-﻿using System;
+﻿using Fotografos.Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-
-#nullable disable
 
 namespace Fotografos.Persistence
 {
     public partial class fotomixContext : DbContext
     {
-        public fotomixContext()
-        {
-        }
+        public fotomixContext() { }
 
-        public fotomixContext(DbContextOptions<fotomixContext> options)
-            : base(options)
-        {
-        }
+        public fotomixContext(DbContextOptions<fotomixContext> options) : base(options) { }
 
         public virtual DbSet<Application> Applications { get; set; }
         public virtual DbSet<Photographer> Photographers { get; set; }
