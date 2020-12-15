@@ -38,7 +38,14 @@ import { MessageService } from "primeng/api";
     TableModule,
     ToastModule,
     RouterModule.forRoot(
-      [{ path: "", component: ApplicationComponent, pathMatch: "full" }],
+      [
+        { path: "", component: ApplicationComponent, pathMatch: "full" },
+        {
+          path: "applications",
+          component: ApplicationComponent,
+          pathMatch: "full",
+        },
+      ],
       { relativeLinkResolution: "legacy" }
     ),
   ],
