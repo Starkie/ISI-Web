@@ -1,4 +1,5 @@
-﻿using Fotografos.Domain;
+﻿using System;
+using Fotografos.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fotografos.Persistence
@@ -52,9 +53,9 @@ namespace Fotografos.Persistence
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Addess)
+                entity.Property(e => e.Address)
                     .IsRequired()
-                    .HasColumnName("addess");
+                    .HasColumnName("address");
 
                 entity.Property(e => e.City)
                     .IsRequired()
@@ -76,6 +77,23 @@ namespace Fotografos.Persistence
                     .HasColumnType("INT")
                     .HasColumnName("telephone");
             });
+
+            // Data seeding:
+            modelBuilder.Entity<Photographer>().HasData(
+                new []
+                {
+                    new Photographer { Id = 1, Name = "Juan", Surename = "Augusto", Address = "C/Falsa 123", City = "Pueblo Falso", Postalcode = 46448, Telephone = 456456465 },
+                    new Photographer { Id = 2, Name = "Carlos", Surename = "Murcia", Address = "C/Falsa 456", City = "Ciudad Falsa", Postalcode = 46444, Telephone = 456456464 },
+                }
+            );
+
+            modelBuilder.Entity<Application>().HasData(
+                new []
+                {
+                    new Application { Id = 1, PhotographerId = 1, Date = new DateTime(2020, 10, 15), EquimentDescription = "Two cameras", Resume = "Photographer at a wedding" },
+                    new Application { Id = 2, PhotographerId = 2, Date = new DateTime(2020, 08, 15), EquimentDescription = "Two cameras and tripod", Resume = "Nature photographer" },
+                }
+            );
 
             OnModelCreatingPartial(modelBuilder);
         }
