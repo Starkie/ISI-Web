@@ -58,7 +58,14 @@ namespace Fotogratos.Server.Controllers
             this.logger.LogInformation($"Creation of application - PhotographerId: {application.PhotographerId}");
 
             // TODO: Implement HTTP status errors.
-            return this.applicationManager.CreateApplication(application);
+            Application newApplication = this.applicationManager.CreateApplication(application);
+
+            if (newApplication is null)
+            {
+                return this.Conflict("The application could not be submitted. Check that all the required data is filled; and check that the photographer hasn't submitted another application in the last 30 days.");
+            }
+
+            return newApplication;
         }
 
     }

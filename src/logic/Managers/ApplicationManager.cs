@@ -1,8 +1,11 @@
+using System;
 namespace Fotografos.Logic.Managers
 {
     using System.Collections.Generic;
+    using System.Linq;
     using Fotografos.Domain;
     using Fotografos.Persistence;
+    using Microsoft.EntityFrameworkCore;
 
     public class ApplicationManager
     {
@@ -31,6 +34,18 @@ namespace Fotografos.Logic.Managers
         {
             if (application.Date == default || string.IsNullOrEmpty(application.EquipmentDescription) ||
                 string.IsNullOrEmpty(application.Resume) || application.PhotographerId == 0)
+            {
+                return null;
+            }
+
+            // Check that no application from the same photographer
+            // was registered in the last 30 days.
+            bool anyApplicationInLast30Days = this.context.Applications.AsNoTracking().ToList().Any(
+                a => a.PhotographerId == application.PhotographerId &&
+                (a.Date - application.Date) <= TimeSpan.FromDays(30)
+            );
+
+            if (anyApplicationInLast30Days)
             {
                 return null;
             }
