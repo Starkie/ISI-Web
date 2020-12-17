@@ -22,8 +22,8 @@ export class PhotographerDetailComponent implements OnInit {
       !this.photographer.surename.trim() ||
       !this.photographer.address.trim() ||
       !this.photographer.city.trim() ||
-      this.photographer.postalCode == 0 ||
-      this.photographer.telephone == 0
+      this.photographer.postalCode === 0 ||
+      this.photographer.telephone === 0
     ) {
       return null;
     }

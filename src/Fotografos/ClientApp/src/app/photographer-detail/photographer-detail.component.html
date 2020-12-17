@@ -6,7 +6,7 @@
         <input
           id="PhotographerName"
           type="text"
-          [ngModel]="photographer.name"
+          [(ngModel)]="photographer.name"
           name="name"
           pInputText
         />
@@ -19,7 +19,7 @@
         <input
           id="PhotographerSurename"
           type="text"
-          [ngModel]="photographer.surename"
+          [(ngModel)]="photographer.surename"
           name="surename"
           pInputText
         />
@@ -31,7 +31,7 @@
       <span class="p-float-label">
         <p-inputNumber
           id="Telephone"
-          [ngModel]="photographer.telephone"
+          [(ngModel)]="photographer.telephone"
           name="telephone"
         ></p-inputNumber>
         <label for="PhotographerTelephone">Telephone:</label>
@@ -45,7 +45,7 @@
         <input
           id="Address"
           type="text"
-          [ngModel]="photographer.address"
+          [(ngModel)]="photographer.address"
           name="address"
           pInputText
         />
@@ -58,7 +58,7 @@
         <input
           id="City"
           type="text"
-          [ngModel]="photographer.city"
+          [(ngModel)]="photographer.city"
           name="city"
           pInputText
         />
@@ -69,7 +69,7 @@
       <span class="p-float-label">
         <p-inputNumber
           id="PostalCode"
-          [ngModel]="photographer.postalCode"
+          [(ngModel)]="photographer.postalCode"
           name="postalCode"
         ></p-inputNumber>
         <label for="PostalCode">Postal code:</label>
@@ -78,7 +78,7 @@
   </div>
   <div class="row mt-4">
     <div class="col-md-4">
-      <p-button label="Create"></p-button>
+      <p-button label="Create" (onClick)="createPhotographer()"></p-button>
     </div>
   </div>
 </form>
