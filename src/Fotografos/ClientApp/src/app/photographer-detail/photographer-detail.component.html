@@ -1,1 +1,85 @@
-<p>photographer-detail works!</p>
+<form name="form" class="photographer_form container">
+  <h2>Create Photographer</h2>
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <input
+          id="PhotographerName"
+          type="text"
+          [ngModel]="photographer.name"
+          name="name"
+          pInputText
+        />
+        <label for="PhotographerName">Name:</label>
+      </span>
+    </div>
+
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <input
+          id="PhotographerSurename"
+          type="text"
+          [ngModel]="photographer.surename"
+          name="surename"
+          pInputText
+        />
+        <label for="PhotographerSurename">Surename:</label>
+      </span>
+    </div>
+
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <p-inputNumber
+          id="Telephone"
+          [ngModel]="photographer.telephone"
+          name="telephone"
+        ></p-inputNumber>
+        <label for="PhotographerTelephone">Telephone:</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <input
+          id="Address"
+          type="text"
+          [ngModel]="photographer.address"
+          name="address"
+          pInputText
+        />
+        <label for="Address">Address:</label>
+      </span>
+    </div>
+
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <input
+          id="City"
+          type="text"
+          [ngModel]="photographer.city"
+          name="city"
+          pInputText
+        />
+        <label for="City">City:</label>
+      </span>
+    </div>
+    <div class="col-md-4">
+      <span class="p-float-label">
+        <p-inputNumber
+          id="PostalCode"
+          [ngModel]="photographer.postalCode"
+          name="postalCode"
+        ></p-inputNumber>
+        <label for="PostalCode">Postal code:</label>
+      </span>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <p-button label="Create"></p-button>
+    </div>
+  </div>
+</form>
+<p-toast></p-toast>

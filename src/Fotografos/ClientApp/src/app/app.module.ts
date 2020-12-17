@@ -18,7 +18,7 @@ import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 import { HomeComponent } from "./home/home.component";
 import { ApplicationComponent } from "./application/application.component";
 import { MessageService } from "primeng/api";
-import { PhotographerDetailComponent } from './photographer-detail/photographer-detail.component';
+import { PhotographerDetailComponent } from "./photographer-detail/photographer-detail.component";
 
 @NgModule({
   declarations: [
@@ -47,6 +47,11 @@ import { PhotographerDetailComponent } from './photographer-detail/photographer-
         {
           path: "applications",
           component: ApplicationComponent,
+          pathMatch: "full",
+        },
+        {
+          path: "photographer/create",
+          component: PhotographerDetailComponent,
           pathMatch: "full",
         },
       ],
