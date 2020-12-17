@@ -42,7 +42,7 @@ namespace Fotografos.Logic.Managers
             // was registered in the last 30 days.
             bool anyApplicationInLast30Days = this.context.Applications.AsNoTracking().ToList().Any(
                 a => a.PhotographerId == application.PhotographerId &&
-                (a.Date - application.Date) <= TimeSpan.FromDays(30)
+                (a.Date - application.Date).Duration() <= TimeSpan.FromDays(30)
             );
 
             if (anyApplicationInLast30Days)
