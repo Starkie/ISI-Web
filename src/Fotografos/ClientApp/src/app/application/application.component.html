@@ -28,7 +28,7 @@
 
   <p-accordionTab header="Submit Application">
     <div class="row">
-      <div class="col-md-4 mt-4" *ngIf="photographers">
+      <div class="col-md-3 mt-4" *ngIf="photographers">
         <span class="p-float-label">
           <p-dropdown
             id="Photographer"
@@ -40,6 +40,13 @@
           ></p-dropdown>
           <label for="Photographer">Photographer:</label>
         </span>
+      </div>
+      <div class="col-md-4 mt-4">
+        <button
+          pButton
+          routerLink="/photographer/create"
+          label="Register Photographer"
+        ></button>
       </div>
     </div>
 
