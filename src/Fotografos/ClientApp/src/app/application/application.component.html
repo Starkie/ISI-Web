@@ -25,5 +25,59 @@
       </ng-template>
     </p-table>
   </p-accordionTab>
+
+  <p-accordionTab header="Submit Application">
+    <div class="row">
+      <div class="col-md-4 mt-4" *ngIf="photographers">
+        <span class="p-float-label">
+          <p-dropdown
+            id="Photographer"
+            name="photographer"
+            [options]="photographers"
+            [(ngModel)]="newApplication.photographerId"
+            optionValue="id"
+            optionLabel="name"
+          ></p-dropdown>
+          <label for="Photographer">Photographer:</label>
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mt-4">
+        <span class="p-float-label">
+          <textarea
+            #photographerResume
+            id="PhotographerResume"
+            pInputTextarea
+            [(ngModel)]="newApplication.resume"
+          ></textarea>
+          <label for="PhotographerResume">Resume:</label>
+        </span>
+      </div>
+
+      <div class="col-md-6 mt-4">
+        <span class="p-float-label">
+          <textarea
+            #photographerEquipment
+            id="PhotographerEquipment"
+            pInputTextarea
+            [(ngModel)]="newApplication.equipmentDescription"
+          ></textarea>
+          <label for="PhotographerEquipment">Equipment Description:</label>
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mt-4">
+        <button
+          pButton
+          label="Submit Application"
+          (click)="createApplication()"
+        ></button>
+      </div>
+    </div>
+  </p-accordionTab>
 </p-accordion>
 <p-toast position="bottom-right"></p-toast>

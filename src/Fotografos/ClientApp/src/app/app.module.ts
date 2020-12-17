@@ -8,6 +8,7 @@ import { AccordionModule } from "primeng/accordion";
 import { ButtonModule } from "primeng/button";
 import { TableModule } from "primeng/table";
 import { InputTextModule } from "primeng/inputtext";
+import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputNumberModule } from "primeng/inputnumber";
 import { DropdownModule } from "primeng/dropdown";
 import { ToastModule } from "primeng/toast";
@@ -35,6 +36,7 @@ import { MessageService } from "primeng/api";
     DropdownModule,
     InputNumberModule,
     InputTextModule,
+    InputTextareaModule,
     TableModule,
     ToastModule,
     RouterModule.forRoot(
