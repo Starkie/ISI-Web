@@ -19,7 +19,14 @@
       <ng-template pTemplate="body" let-application let-columns="columns">
         <tr>
           <td *ngFor="let col of columns">
-            {{ application[col.field] }}
+            <div [ngSwitch]="col.type">
+              <span *ngSwitchCase="'Photographer'">
+                {{ getPhotographerName(application[col.field]) }}
+              </span>
+              <span *ngSwitchDefault>
+                {{ application[col.field] }}
+              </span>
+            </div>
           </td>
         </tr>
       </ng-template>

@@ -73,6 +73,12 @@ export class ApplicationComponent implements OnInit {
       });
   }
 
+  getPhotographerName(id: number): string {
+    const photographer = this.photographers.find((p) => p.id === id);
+
+    return `${photographer.name} ${photographer.surename}`;
+  }
+
   getEmptyApplication(): Application {
     return { photographerId: -1 } as Application;
   }
