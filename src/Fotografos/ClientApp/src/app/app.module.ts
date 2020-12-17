@@ -18,6 +18,7 @@ import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 import { HomeComponent } from "./home/home.component";
 import { ApplicationComponent } from "./application/application.component";
 import { MessageService } from "primeng/api";
+import { PhotographerDetailComponent } from './photographer-detail/photographer-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MessageService } from "primeng/api";
     NavMenuComponent,
     HomeComponent,
     ApplicationComponent,
+    PhotographerDetailComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
