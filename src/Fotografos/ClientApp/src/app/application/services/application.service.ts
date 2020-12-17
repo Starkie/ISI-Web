@@ -57,8 +57,8 @@ export class ApplicationService {
 
       this.messageService.add({
         severity: "error",
-        summary: operation,
-        detail: "The operation failed",
+        summary: `${operation} failed`,
+        detail: error.error,
       });
 
       // Let the app keep running by returning an empty result.
