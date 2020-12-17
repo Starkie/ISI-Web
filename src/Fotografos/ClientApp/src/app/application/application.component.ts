@@ -45,13 +45,13 @@ export class ApplicationComponent implements OnInit {
 
   getPhotographers(): void {
     this.photographerService.getPhotographers().subscribe((ps) => {
-      this.photographers = ps;
+      this.photographers = [{ id: null } as Photographer].concat(ps);
     });
   }
 
   createApplication(): void {
     if (
-      this.newApplication.photographerId == -1 ||
+      !this.newApplication.photographerId ||
       !this.newApplication.resume.trim() ||
       !this.newApplication.equipmentDescription.trim()
     ) {
